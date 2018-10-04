@@ -4,7 +4,7 @@
   right: 35px;
   top: 35px;
   cursor: pointer;
-  transition: all 1.5s ease-out; }
+  transition: all 0.5s ease-out; }
   .menu-btn .btn-line {
     width: 28px;
     height: 3px;
@@ -44,13 +44,13 @@
     background: black;
     list-style: none;
     transform: translate3d(0, -100%, 0);
-    transition: all 1.5s ease-out; }
+    transition: all 0.5s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
     background: #0d0208;
     transform: translate3d(0, 100%, 0);
-    transition: all 1.5s ease-out; }
+    transition: all 0.5s ease-out; }
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
     .menu-branding .portrait {
@@ -62,7 +62,7 @@
       border: solid 3px #008f11; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
-    transition: all 1.5s ease-out; }
+    transition: all 0.5s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
@@ -76,7 +76,7 @@
     font-weight: 300;
     color: #fff;
     text-decoration: none;
-    transition: all 1.5s ease-out; }
+    transition: all 0.5s ease-out; }
     .menu .nav-link:hover {
       color: #008f11; }
 
@@ -91,6 +91,38 @@
 
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem;
+      position: auto; }
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show,
+    div.menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px; }
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0); }
+    .menu-branding .portrait {
+      background: url(../img/portrait_small.jpg);
+      width: 150px;
+      height: 150px; } }
+
+@media screen and (max-width: 500px) {
+  main#home h1 {
+    margin-top: 10vh; } }
 
 * {
   box-sizing: border-box; }
@@ -129,7 +161,8 @@ h3 {
   h2.sm-heading,
   h3.sm-heading {
     margin-bottom: 2rem;
-    padding: 0.2rem 1rem; }
+    padding: 0.2rem 1rem;
+    background: rgba(22, 3, 13, 0.15); }
 
 a {
   color: #fff;
@@ -152,4 +185,8 @@ main {
       padding: 0.4rem; }
       main .icons a:hover {
         color: #008f11;
-        transition: all 1.5s ease-out; }
+        transition: all 0.5s ease-out; }
+  main#home {
+    overflow: hidden; }
+    main#home h1 {
+      margin-top: 20vh; }
