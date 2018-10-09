@@ -26,7 +26,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9;
+  opacity: 0.95;
   visibility: hidden; }
   .menu.show {
     visibility: visible; }
@@ -154,7 +154,8 @@ main {
   padding: 4rem;
   min-height: calc(100vh-60px); }
   main .icons {
-    margin-top: 1rem; }
+    margin-top: 1rem;
+    margin-left: 1.5rem; }
     main .icons a {
       padding: 0.4rem; }
       main .icons a:hover {
@@ -204,6 +205,25 @@ main {
   .projects a {
     color: #008f11; }
 
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem; }
+  .boxes div {
+    font-size: 2rem;
+    border: 3px #008f11 solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    transition: all 0.5s ease-out; }
+    .boxes div:hover {
+      padding: 0.5rem 1.5rem;
+      background: #008f11;
+      color: #fff; }
+      .boxes div:hover span {
+        color: #fff; }
+
 .btn, .btn-dark, .btn-light {
   display: block;
   padding: 0.5rem 1rem;
@@ -213,7 +233,7 @@ main {
 .btn-dark {
   transition: all 0.5s ease-out; }
   .btn-dark:hover {
-    background: #e6e6e6; }
+    background: #cccccc; }
 
 .btn-light {
   transition: all 0.5s ease-out; }
