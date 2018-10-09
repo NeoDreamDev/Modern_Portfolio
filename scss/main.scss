@@ -15,6 +15,12 @@ body {
   line-height: 1.5;
 }
 
+hr {
+  height: 3px;
+  background: $secondary-color;
+  margin-bottom: 20px;
+}
+
 // Headings
 h1,
 h2,
@@ -114,8 +120,7 @@ main {
 
 .projects {
   display: grid;
-  grid-gap: 0.7rem;
-  grid-template-columns: repeat (3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 
   img {
     width: 100%;
@@ -129,6 +134,35 @@ main {
   }
   a {
     color: $secondary-color;
+  }
+}
+
+//button styles
+.btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+  // &:hover {
+  //   background: $secondary-color;
+  //   color: set-text-color ($primary-color);
+  // }
+}
+
+.btn-dark {
+  @extend .btn;
+  @include easeOut;
+  &:hover {
+    background: darken($primary-color, 10);
+  }
+}
+
+.btn-light {
+  @extend .btn;
+  @include easeOut;
+  &:hover {
+    background: $secondary-color;
+    color: #fff;
   }
 }
 
