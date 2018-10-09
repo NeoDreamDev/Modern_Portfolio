@@ -186,6 +186,20 @@ main {
     padding: 0.5rem;
     border-bottom: #008f11 5px solid; }
 
+.projects {
+  display: grid;
+  grid-gap: 0.7rem;
+  grid-template-columns: repeat 3, 1fr; }
+  .projects img {
+    width: 100%;
+    border: 3px #fff solid; }
+    .projects img:hover {
+      opacity: 0.5;
+      border-color: #008f11;
+      transition: all 0.5s ease-out; }
+  .projects a {
+    color: #008f11; }
+
 #main-footer {
   text-align: center;
   padding: 1rem;
